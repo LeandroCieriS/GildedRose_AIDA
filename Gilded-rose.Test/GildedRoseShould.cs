@@ -118,5 +118,16 @@ namespace Gilded_rose.Test
             Items.First().Quality.Should().Be(33);
         }
 
+        [Test]
+        public void should_drop_quality_to_zero_when_backstage_item_expires()
+        {
+            IList<Item> Items = new List<Item> { new Item { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 0, Quality = 30 } };
+            var app = new GildedRose(Items);
+
+            app.UpdateQuality();
+
+            Items.First().Quality.Should().Be(0);
+        }
+
     }
 }
