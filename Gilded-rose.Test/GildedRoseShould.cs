@@ -10,27 +10,29 @@ namespace Gilded_rose.Test
         [TestCase(10, 20, 19)]
         [TestCase(-4, 25, 23)]
         [TestCase(10, 0, 0)]
-        public void decrease_quality_of_items(int sellIn, int quality, int expected)
+        public void decrease_quality_of_items(int sellIn, int quality, int expectedQuality)
         {
             IList<Item> Items = new List<Item> { new Item { Name = "Normal item", SellIn = sellIn, Quality = quality } };
             var app = new GildedRose(Items);
 
             app.UpdateQuality();
 
-            Items.First().Quality.Should().Be(expected);
+            Items.First().SellIn.Should().Be(sellIn-1);
+            Items.First().Quality.Should().Be(expectedQuality);
         }
 
 
         [TestCase(1, 20, 21)]
         [TestCase(0, 20, 22)]
-        public void increase_quality_of_aged_brie(int sellIn, int quality, int expected)
+        public void increase_quality_of_aged_brie(int sellIn, int quality, int expectedQuality)
         {
             IList<Item> Items = new List<Item> { new Item { Name = "Aged Brie", SellIn = sellIn, Quality = quality } };
             var app = new GildedRose(Items);
 
             app.UpdateQuality();
 
-            Items.First().Quality.Should().Be(expected);
+            Items.First().SellIn.Should().Be(sellIn-1);
+            Items.First().Quality.Should().Be(expectedQuality);
         }
 
         [Test]
@@ -40,7 +42,8 @@ namespace Gilded_rose.Test
             var app = new GildedRose(Items);
 
             app.UpdateQuality();
-
+            
+            Items.First().SellIn.Should().Be(-1);
             Items.First().Quality.Should().Be(50);
         }
         
@@ -52,6 +55,7 @@ namespace Gilded_rose.Test
 
             app.UpdateQuality();
 
+            Items.First().SellIn.Should().Be(2);
             Items.First().Quality.Should().Be(80);
         }
 
@@ -59,7 +63,7 @@ namespace Gilded_rose.Test
         [TestCase(10, 30, 32)]
         [TestCase(5, 30, 33)]
         [TestCase(0, 30, 0)]
-        public void should_increase_quality_of_backstage(int sellIn, int quality, int expected)
+        public void should_increase_quality_of_backstage(int sellIn, int quality,  int expectedQuality)
         {
             IList<Item> Items = new List<Item> { new Item 
                 { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = sellIn, Quality = quality } };
@@ -67,7 +71,8 @@ namespace Gilded_rose.Test
 
             app.UpdateQuality();
 
-            Items.First().Quality.Should().Be(expected);
+            Items.First().SellIn.Should().Be(sellIn-1);
+            Items.First().Quality.Should().Be(expectedQuality);
         }
     }
 }
