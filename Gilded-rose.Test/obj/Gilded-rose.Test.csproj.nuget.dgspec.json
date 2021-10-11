@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aargarcia\\Desktop\\Gilded Rose Kata\\Gilded-rose.Test\\Gilded-rose.Test.csproj": {}
+    "C:\\Users\\lceri\\Desktop\\repos\\GildedRose_Kata\\Gilded-rose.Test\\Gilded-rose.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aargarcia\\Desktop\\Gilded Rose Kata\\Gilded-rose.Test\\Gilded-rose.Test.csproj": {
+    "C:\\Users\\lceri\\Desktop\\repos\\GildedRose_Kata\\Gilded-rose.Test\\Gilded-rose.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aargarcia\\Desktop\\Gilded Rose Kata\\Gilded-rose.Test\\Gilded-rose.Test.csproj",
+        "projectUniqueName": "C:\\Users\\lceri\\Desktop\\repos\\GildedRose_Kata\\Gilded-rose.Test\\Gilded-rose.Test.csproj",
         "projectName": "Gilded-rose.Test",
-        "projectPath": "C:\\Users\\aargarcia\\Desktop\\Gilded Rose Kata\\Gilded-rose.Test\\Gilded-rose.Test.csproj",
-        "packagesPath": "C:\\Users\\aargarcia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aargarcia\\Desktop\\Gilded Rose Kata\\Gilded-rose.Test\\obj\\",
+        "projectPath": "C:\\Users\\lceri\\Desktop\\repos\\GildedRose_Kata\\Gilded-rose.Test\\Gilded-rose.Test.csproj",
+        "packagesPath": "C:\\Users\\lceri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lceri\\Desktop\\repos\\GildedRose_Kata\\Gilded-rose.Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\aargarcia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lceri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.1"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -26,11 +26,11 @@
           "https://www.myget.org/F/aidacanarias/auth/91440d25-96ec-4958-861c-c4cac6f1192c/api/v2": {}
         },
         "frameworks": {
-          "netcoreapp2.1": {
-            "targetAlias": "netcoreapp2.1",
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\aargarcia\\Desktop\\Gilded Rose Kata\\Gilded-rose\\Gilded-rose.csproj": {
-                "projectPath": "C:\\Users\\aargarcia\\Desktop\\Gilded Rose Kata\\Gilded-rose\\Gilded-rose.csproj"
+              "C:\\Users\\lceri\\Desktop\\repos\\GildedRose_Kata\\Gilded-rose\\Gilded-rose.csproj": {
+                "projectPath": "C:\\Users\\lceri\\Desktop\\repos\\GildedRose_Kata\\Gilded-rose\\Gilded-rose.csproj"
               }
             }
           }
@@ -42,8 +42,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.1": {
-          "targetAlias": "netcoreapp2.1",
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "FluentAssertions": {
               "target": "Package",
@@ -52,12 +52,6 @@
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[15.8.0, )"
-            },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.1.0, )",
-              "autoReferenced": true
             },
             "NUnit": {
               "target": "Package",
@@ -74,21 +68,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\aargarcia\\Desktop\\Gilded Rose Kata\\Gilded-rose\\Gilded-rose.csproj": {
+    "C:\\Users\\lceri\\Desktop\\repos\\GildedRose_Kata\\Gilded-rose\\Gilded-rose.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aargarcia\\Desktop\\Gilded Rose Kata\\Gilded-rose\\Gilded-rose.csproj",
+        "projectUniqueName": "C:\\Users\\lceri\\Desktop\\repos\\GildedRose_Kata\\Gilded-rose\\Gilded-rose.csproj",
         "projectName": "Gilded-rose",
-        "projectPath": "C:\\Users\\aargarcia\\Desktop\\Gilded Rose Kata\\Gilded-rose\\Gilded-rose.csproj",
-        "packagesPath": "C:\\Users\\aargarcia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aargarcia\\Desktop\\Gilded Rose Kata\\Gilded-rose\\obj\\",
+        "projectPath": "C:\\Users\\lceri\\Desktop\\repos\\GildedRose_Kata\\Gilded-rose\\Gilded-rose.csproj",
+        "packagesPath": "C:\\Users\\lceri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lceri\\Desktop\\repos\\GildedRose_Kata\\Gilded-rose\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\aargarcia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lceri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

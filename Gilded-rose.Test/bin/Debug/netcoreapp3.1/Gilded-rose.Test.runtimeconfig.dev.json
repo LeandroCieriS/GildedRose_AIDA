@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\lceri\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\lceri\\.nuget\\packages"
+    ]
+  }
+}

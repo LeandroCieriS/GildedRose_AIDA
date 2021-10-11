@@ -689,19 +689,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aargarcia\\.nuget\\packages\\": {}
+    "C:\\Users\\lceri\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aargarcia\\Desktop\\Gilded Rose Kata\\Gilded-rose\\Gilded-rose.csproj",
+      "projectUniqueName": "C:\\Users\\lceri\\Desktop\\repos\\GildedRose_Kata\\Gilded-rose\\Gilded-rose.csproj",
       "projectName": "Gilded-rose",
-      "projectPath": "C:\\Users\\aargarcia\\Desktop\\Gilded Rose Kata\\Gilded-rose\\Gilded-rose.csproj",
-      "packagesPath": "C:\\Users\\aargarcia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aargarcia\\Desktop\\Gilded Rose Kata\\Gilded-rose\\obj\\",
+      "projectPath": "C:\\Users\\lceri\\Desktop\\repos\\GildedRose_Kata\\Gilded-rose\\Gilded-rose.csproj",
+      "packagesPath": "C:\\Users\\lceri\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lceri\\Desktop\\repos\\GildedRose_Kata\\Gilded-rose\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\aargarcia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lceri\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
