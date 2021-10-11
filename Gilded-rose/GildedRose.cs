@@ -5,24 +5,36 @@ namespace Gilded_rose
     public class GildedRose
     {
         public IList<Item> Items;
-        
+
         public GildedRose(IList<Item> Items)
         {
             this.Items = Items;
+        }
+
+        private bool IsNormalItem(Item item)
+        {
+            return item.Name.Equals("Normal item");
+        }
+
+        private bool IsLegendaryItem(Item item)
+        {
+            return item.Name.Equals("Sulfuras, Hand of Ragnaros");
+        }
+
+        private bool IsIncreasingItem(Item item)
+        {
+            return item.Name.Equals("Aged Brie") || item.Name.Equals("Backstage passes to a TAFKAL80ETC concert");
         }
 
         public void UpdateQuality()
         {
             for (var i = 0; i < Items.Count; i++)
             {
-                if (Items[i].Name != "Aged Brie" && Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
+                if (IsNormalItem(Items[i]))
                 {
                     if (Items[i].Quality > 0)
                     {
-                        if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
-                        {
-                            Items[i].Quality = Items[i].Quality - 1;
-                        }
+                        Items[i].Quality = Items[i].Quality - 1;
                     }
                 }
                 else
