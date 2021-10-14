@@ -62,11 +62,26 @@ namespace Gilded_rose.Test
         [TestCase(11, 30, 31)]
         [TestCase(10, 30, 32)]
         [TestCase(5, 30, 33)]
+        [TestCase(1, 30, 33)]
         [TestCase(0, 30, 0)]
         public void should_increase_quality_of_backstage(int sellIn, int quality,  int expectedQuality)
         {
             IList<Item> Items = new List<Item> { new Item 
                 { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = sellIn, Quality = quality } };
+            var app = new GildedRose(Items);
+
+            app.UpdateQuality();
+
+            Items.First().SellIn.Should().Be(sellIn-1);
+            Items.First().Quality.Should().Be(expectedQuality);
+        }
+
+        [TestCase(10, 30, 28)]
+        [TestCase(0, 30, 26)]
+        public void should_decrease_quality_of_Conjured_twice_as_fast(int sellIn, int quality,  int expectedQuality)
+        {
+            IList<Item> Items = new List<Item> { new Item 
+                { Name = "Conjured", SellIn = sellIn, Quality = quality } };
             var app = new GildedRose(Items);
 
             app.UpdateQuality();

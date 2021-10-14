@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net.Http.Headers;
 
 namespace Gilded_rose
 {
     internal class ItemFactory
     {
-        private Dictionary<string, Func<IItem>> _dictionary;
+        private readonly Dictionary<string, Func<IItem>> _dictionary;
         
         public ItemFactory()
         {
@@ -20,12 +19,11 @@ namespace Gilded_rose
                 },
                 {
                     "Sulfuras, Hand of Ragnaros", () => new SulfurasItem()
+                },
+                {
+                    "Conjured", () => new ConjuredItem()
                 }
-                //},
-                //{
-                //    "Conjured", () => new ConjuredItem()
-                //}
-            };
+        };
         }
 
         public IItem CreateItem(string itemName)
@@ -34,81 +32,6 @@ namespace Gilded_rose
                 return _dictionary[itemName].Invoke();
 
             return new NormalItem();
-        }
-    }
-
-    internal interface IItem
-    {
-        void UpdateQuality(Item item);
-    }
-
-    internal class SulfurasItem : IItem
-    {
-        public void UpdateQuality(Item item)
-        {}
-    }
-
-    internal class AgedBrieItem : IItem
-    {
-        public void UpdateQuality(Item item)
-        {
-            item.SellIn--;
-
-            if (item.SellIn >= 0 && item.Quality < 50)
-            {
-                item.Quality++;
-            }
-            else if (item.SellIn < 0)
-            {
-                item.Quality = Math.Min(item.Quality += 2, 50);
-            }
-        }
-    }
-
-    internal class NormalItem : IItem
-    {
-        public void UpdateQuality(Item item)
-        {
-            item.SellIn--;
-
-            if (item.SellIn > 0 && item.Quality > 0)
-            {
-                item.Quality--;
-            }
-            else if (item.SellIn < 0 && item.Quality > 0)
-            {
-                item.Quality -= 2;
-            }
-        }
-    }
-
-    internal class BackstageItem : IItem
-    {
-        public void UpdateQuality(Item item)
-        {
-            item.SellIn--;
-
-            if (item.SellIn <= 0)
-            {
-                item.Quality = 0;
-            }
-            else
-            {
-                if (item.Quality < 50)
-                {
-                    item.Quality++;
-                }
-
-                if (item.SellIn < 10 && item.Quality < 50)
-                {
-                    item.Quality++;
-                }
-
-                if (item.SellIn < 5 && item.Quality < 50)
-                {
-                    item.Quality++;
-                }
-            }
         }
     }
 }
