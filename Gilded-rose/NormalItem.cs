@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using static Gilded_rose.UpdateTools;
 
 namespace Gilded_rose
@@ -12,6 +13,24 @@ namespace Gilded_rose
             {
                 DecreaseQuality(item);
             }
+=======
+﻿using System;
+
+namespace Gilded_rose
+{
+    internal class NormalItem : IItem
+    {
+        public void UpdateQuality(Item item)
+        {
+            item.SellIn--;
+
+            var qualityLoad = 1;
+
+            if (item.SellIn < 0)
+                qualityLoad ++;
+
+            item.Quality = Math.Max(item.Quality - qualityLoad, 0);
+>>>>>>> main
         }
     }
 }

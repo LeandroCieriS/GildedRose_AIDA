@@ -89,5 +89,19 @@ namespace Gilded_rose.Test
             Items.First().SellIn.Should().Be(sellIn - 1);
             Items.First().Quality.Should().Be(expectedQuality);
         }
+
+        [TestCase(10, 30, 28)]
+        [TestCase(0, 30, 26)]
+        public void should_decrease_quality_of_Conjured_twice_as_fast(int sellIn, int quality,  int expectedQuality)
+        {
+            IList<Item> Items = new List<Item> { new Item 
+                { Name = "Conjured", SellIn = sellIn, Quality = quality } };
+            var app = new GildedRose(Items);
+
+            app.UpdateQuality();
+
+            Items.First().SellIn.Should().Be(sellIn-1);
+            Items.First().Quality.Should().Be(expectedQuality);
+        }
     }
 }
